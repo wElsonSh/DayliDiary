@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  user-select: none;
+  background-color: #111;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style-type: none;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+.wrapper .main {
+  width: 50rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (max-width: 880px) {
+  .wrapper .main {
+    width: 40rem;
+  }
+}
+@media (max-width: 700px) {
+  .wrapper .main {
+    width: 30rem;
+  }
+}
+@media (max-width: 530px) {
+  .wrapper .main {
+    width: 100%;
+  }
+}
+.wrapper .main .header {
+  width: 100%;
+  height: 5rem;
+  background-color: #151515;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5215686275);
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+@media (max-width: 880px) {
+  .wrapper .main .header {
+    padding: 1rem;
+  }
+}
+.wrapper .main .header .header_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.wrapper .main .header .header_container .header_input {
+  width: 70%;
+  height: 100%;
+  outline: none;
+  border: none;
+  border-radius: 16px;
+  background-color: #222;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  color: #F2DCFF;
+  font-family: "Fira Code", monospace;
+  font-size: 1.1em;
+}
+.wrapper .main .header .header_container .header_input_btn {
+  width: 30%;
+  height: 100%;
+  background-color: #b17dea;
+  color: #5F1BAA;
+  border: none;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  border-radius: 16px;
+  cursor: pointer;
+  outline: 3px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.wrapper .main .header .header_container .header_input_btn .header_input_btn_span {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  background-color: rgba(255, 255, 255, 0.5647058824);
+}
+.wrapper .main .header .header_container .header_input_btn .check__ {
+  display: none;
+}
+.wrapper .main .header .header_container .header_input_btn:hover {
+  font-size: 14px;
+  outline: 3px solid rgba(178, 125, 234, 0.5607843137);
+}
+.wrapper .main .header .header_container .header_input_btn__complete {
+  background-color: #DCFEF5;
+  color: #0D795A;
+}
+@media (max-width: 530px) {
+  .wrapper .main .header .header_container .header_input_btn__complete h3 {
+    display: none;
+  }
+}
+.wrapper .main .header .header_container .header_input_btn__complete .check__ {
+  display: block;
+}
+@media (max-width: 880px) {
+  .wrapper .main .header .header_container .header_input_btn__complete .check__ {
+    display: none;
+  }
+}
+@media (max-width: 530px) {
+  .wrapper .main .header .header_container .header_input_btn__complete .check__ {
+    display: block;
+  }
+}
+.wrapper .main .header .header_container .header_input_btn__complete:hover {
+  font-size: 13px;
+  outline: 3px solid transparent;
+}
+.wrapper .main .days {
+  width: 100%;
+  height: 100%;
+  background-color: #151515;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5215686275);
+  border-radius: 20px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+.wrapper .main .days .days_list {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+}
+.wrapper .main .days .days_list .days_list_item {
+  width: 100%;
+  min-height: 3rem;
+  height: fit-content;
+  border-radius: 16px;
+  background-color: #222;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  color: #F2DCFF;
+  font-family: "Fira Code", monospace;
+  font-size: 1.1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.wrapper .main .days .days_list .days_list_item p {
+  hyphens: auto;
+  word-break: break-all;
+  text-align: start;
+}
+.wrapper .main .days .days_list .days_list_item .days_list_item_header {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  color: #FFA835;
+}
+
+.blur {
+  position: absolute;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background-color: #111;
+  left: 0;
+  top: 0;
+  font-size: 3em;
+  color: #FF3672;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+.blur span:nth-child(1) {
+  animation: loaderDotes 2s ease infinite;
+}
+.blur span:nth-child(2) {
+  animation: loaderDotes 2s ease infinite;
+  animation-delay: 0.5s;
+}
+.blur span:nth-child(3) {
+  animation: loaderDotes 2s ease infinite;
+  animation-delay: 1s;
+}
+
+@keyframes loaderDotes {
+  50% {
+    transform: translateY(-3px);
+  }
+}
+.no_visible {
+  display: none;
+}
+
+/*# sourceMappingURL=index.css.map */
